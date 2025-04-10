@@ -1,0 +1,36 @@
+# 📦 Dépendances
+node_modules/
+
+# 🏗️ Fichiers de build
+dist/
+dist-ssr/
+
+# 🔐 Environnements
+.env
+.env.*.local
+*.local
+
+# 🪵 Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ⚙️ Config IDE
+.vscode/
+!.vscode/extensions.json
+.idea/
+.DS_Store
+
+# 🧪 Projets Visual Studio
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# 🔐 Fichier clé Firebase à ne pas versionner
+server/serviceAccountKey.json

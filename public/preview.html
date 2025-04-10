@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MythrilTrack - Portail</title>
+
+  <!-- Favicon Anneau -->
+  <link rel="icon" type="image/png" href="/favicon-lotr.png" />
+
+  <!-- Polices fantasy -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/ringbearer" />
+
+  <style>
+    :root {
+      --font-fantasy: 'Ringbearer', 'Cinzel', Georgia, serif;
+      --bg-dark: #1a1a1a;
+      --text-dark: #f9f9f9;
+      --accent: #FFD700;
+    }
+
+    html[data-theme='dark'] {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-fantasy);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+      min-height: 100vh;
+      padding: 2rem 1rem;
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    header svg {
+      width: 64px;
+      height: 64px;
+      animation: pulse 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes pulse {
+      from { transform: scale(1); }
+      to   { transform: scale(1.08); }
+    }
+
+    h1 {
+      color: var(--accent);
+      font-size: 2.2rem;
+      margin-top: 0.5rem;
+    }
+
+    .card {
+      background: #2a2a2a;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(255, 215, 0, 0.2);
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .card.admin {
+      border: 2px solid var(--accent);
+      background: #1d1d1d;
+    }
+
+    .elvish {
+      font-style: italic;
+      font-size: 0.9rem;
+      opacity: 0.85;
+      margin-bottom: 1rem;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.6rem;
+      margin-bottom: 1rem;
+      border-radius: 6px;
+      border: 1px solid #444;
+      background: #111;
+      color: white;
+      font-size: 1rem;
+    }
+
+    input:focus {
+      outline: 2px solid var(--accent);
+    }
+
+    button {
+      background-color: #FFD700;
+      color: #1a1a1a;
+      font-size: 1rem;
+      font-weight: bold;
+      padding: 0.7rem 1.4rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 0.5rem;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #e5c100;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.6rem;
+      }
+
+      .card {
+        padding: 1.4rem;
+      }
+
+      button {
+        font-size: 0.95rem;
+        padding: 0.6rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <svg viewBox="0 0 512 512">
+      <circle cx="256" cy="256" r="246" stroke="#FFD700" stroke-width="20" fill="none"/>
+      <text x="50%" y="54%" text-anchor="middle" fill="#FFD700" font-size="48" dy=".3em">🧙</text>
+    </svg>
+    <h1>MythrilTrack</h1>
+    <p class="elvish">"Iston i chîn a thûl" – Je connais ton cœur et ton souffle.</p>
+  </header>
+
+  <!-- Formulaire Email/Password -->
+  <section class="card">
+    <h2>Connexion</h2>
+    <input type="email" placeholder="Adresse email" />
+    <input type="password" placeholder="Mot de passe" />
+    <button>Se connecter</button>
+    <p style="margin-top: 1rem;">ou</p>
+    <button style="background:#4285f4; color:white">Connexion Google</button>
+  </section>
+
+  <!-- Admin Preview -->
+  <section class="card admin">
+    <h2>👑 Admin Panel</h2>
+    <p>Bienvenue, Maître des Anneaux.</p>
+    <button>Voir les utilisateurs</button>
+    <button style="margin-top: 0.5rem;">Gérer les quêtes</button>
+  </section>
+</body>
+</html>
